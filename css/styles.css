@@ -1,0 +1,56 @@
+
+  #map {
+    height: 500px;
+    width: 100%;
+  }
+/* Container de l'icône */
+.station-icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: #333; /* Corps principal de la station spatiale */
+  border-radius: 50%; /* Forme circulaire */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Ombre pour donner de la profondeur */
+}
+
+/* Détail de l'antenne */
+.station-icon .antenna {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 20px;
+  background-color: #2ecc71; /* Couleur de l'antenne */
+  border-radius: 2px;
+}
+
+/* Détecteurs latéraux */
+.station-icon .detector {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #f39c12; /* Couleur des détecteurs latéraux */
+  border-radius: 50%;
+  top: 50%;
+  left: -18px; /* À gauche */
+  transform: translateY(-50%);
+}
+
+.station-icon .detector.right {
+  left: auto;
+  right: -18px; /* À droite */
+}
+
+/* Texte pour "ISS" */
+.station-icon:before {
+  content: 'ISS';
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+}
